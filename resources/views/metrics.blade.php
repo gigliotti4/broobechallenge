@@ -4,23 +4,26 @@
 <div class="container mt-5">
     <form id="metricsForm">
         @csrf
-        <div class="mb-3">
-            <label for="url" class="form-label">URL</label>
-            <input type="text" class="form-control" id="url" name="url" placeholder="Ingrese la URL" required
-                   pattern="https?://.+" title="Por favor, ingrese una URL válida con http o https">
-            <div class="invalid-feedback">
-                Por favor, ingrese una URL válida.
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <label for="url" class="form-label">URL</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Ingrese la URL" required
+                       pattern="https?://.+" title="Por favor, ingrese una URL válida con http o https">
+                <div class="invalid-feedback">
+                    Por favor, ingrese una URL válida.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="category" class="form-label">Categories</label>
+                <select id="category" name="category[]" class="form-select select2" multiple="multiple" required>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->name }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
-        <div class="mb-3">
-            <label for="category" class="form-label">Categories</label>
-            <select id="category" name="category[]" class="form-select select2" multiple="multiple" required>
-                @foreach($categories as $category)
-                    <option value="{{ $category->name }}">{{ $category->name }}</option>
-                @endforeach
-            </select>
-        </div>
-        <div class="mb-3">
+        <div class="col-md-6 mb-3">
             <label for="strategy" class="form-label">Strategy</label>
             <select id="strategy" name="strategy" class="form-select">
                 @foreach($strategies as $strategy)
