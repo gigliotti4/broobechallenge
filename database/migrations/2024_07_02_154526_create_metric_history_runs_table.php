@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('performance_metric')->nullable();
             $table->string('seo_metric')->nullable();
             $table->string('best_practices_metric')->nullable();
+            $table->string('strategy')->nullable();
             $table->timestamps();
         });
     }
