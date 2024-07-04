@@ -9,6 +9,16 @@ class MetricHistoryRun extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'url',
+        'accessibility_metric',
+        'pwa_metric',
+        'performance_metric',
+        'seo_metric',
+        'best_practices_metric',
+        'strategy'
+    ];
+
     public function strategy()
     {
         return $this->belongsTo(Strategy::class);

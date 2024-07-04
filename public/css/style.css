@@ -1,0 +1,28 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+}
+.navbar-brand{    
+    font-size: 40px !important;
+    font-weight: 500 !important;
+}
+.nav-link{
+    font-size: 20px !important;
+    color: black !important;
+}
+.nav-link:hover{
+    font-size: 20px !important;
+    color: #3cc6f3 !important;
+}
+
+.active{
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: #3cc6f3 !important;
+}
+
+.form-label{
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    color: black !important;
+}
